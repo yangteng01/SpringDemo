@@ -1,0 +1,10 @@
+package cn.gyyx.beans;
+
+public class UserInfo {
+
+	private int code;
+	private String account;
+	private String password;
+	
+	
+}

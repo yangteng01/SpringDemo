@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gyyx.test.dao.IUserDao">
+
+	<sql id="userColumn">code,account,password,sex,age,mail</sql>
+	<select id="selectByAccount" resultType="UserInfo">
+		select <include refid="userColumn"/> from user_info_tb
+		<where>
+			<if test="account != null">
+				account =#{account}
+			</if>
+		</where>
+	</select>
+	
+	<select id="selectByMoreAccount" resultType="UserInfo">
+		select <include refid="userColumn"/> from user_info_tb where account in
+		<foreach item ="item" index="index" collection="list" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+	</select>
+	
+</mapper>

@@ -1,0 +1,6 @@
+package cn.gyyx.dao;
+
+public class UserDao {
+
+	public SqlSessionFactory sessionFactory=SessionFactory.getSqlSession();
+}

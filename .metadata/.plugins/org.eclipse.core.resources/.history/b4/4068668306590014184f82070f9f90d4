@@ -1,0 +1,42 @@
+package cn.gyyx.beans;
+
+public class UserInfo {
+
+	private int code;
+	private String account;
+	private String password;
+	
+	/**
+	 * 查询code
+	 * @return
+	 */
+	public int getCode() {
+		return code;
+	}
+	
+	/**
+	 * 设置code
+	 * @param code
+	 */
+	public void setCode(int code) {
+		this.code = code;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public String getAccount() {
+		return account;
+	}
+	public void setAccount(String account) {
+		this.account = account;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+		
+}

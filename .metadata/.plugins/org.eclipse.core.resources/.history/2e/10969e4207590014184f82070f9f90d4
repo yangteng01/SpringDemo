@@ -1,0 +1,10 @@
+package cn.gyyx.dao;
+
+import java.util.List;
+
+import cn.gyyx.beans.UserInfo;
+
+public interface IUserDao {
+
+	List<UserInfo> getUserList(String account);
+}
